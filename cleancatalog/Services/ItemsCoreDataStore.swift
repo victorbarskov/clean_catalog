@@ -46,7 +46,7 @@ class ItemsCoreDataStore: ItemsStoreProtocol {
         } catch {
             fatalError("Error migrating store: \(error)")
         }
-        
+
         privateManagedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         privateManagedObjectContext.parent = mainManagedObjectContext
         
